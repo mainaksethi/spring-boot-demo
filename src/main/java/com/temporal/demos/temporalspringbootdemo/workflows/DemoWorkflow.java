@@ -16,4 +16,7 @@ public interface DemoWorkflow {
 
     @QueryMethod
     CloudEvent getLastEvent();
+
+    @WorkflowMethod
+    public String callPythonActivity(String name);
 }
