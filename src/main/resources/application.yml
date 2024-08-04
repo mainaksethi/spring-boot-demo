@@ -30,6 +30,13 @@ spring:
         rate-limits:
           max-worker-activities-per-second: 0
           max-task-queue-activities-per-second: 0
+      - task-queue: python-greeting-tasks
+        capacity:
+          max-concurrent-workflow-task-pollers: 6
+          max-concurrent-activity-task-pollers: 6
+        rate-limits:
+          max-worker-activities-per-second: 0
+          max-task-queue-activities-per-second: 0
     workflow-cache:
       max-instances: 10
       max-threads: 10
